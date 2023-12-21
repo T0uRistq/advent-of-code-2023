@@ -1,8 +1,7 @@
+fun gcd(a: Long, b: Long): Long {
+    return if (b == 0L) a else gcd(b, a % b)
+}
 fun main() {
-    fun gcd(a: Long, b: Long): Long {
-        return if (b == 0L) a else gcd(b, a % b)
-    }
-
     fun solveAll(input: List<String>, isPart1: Boolean): Long {
         val instr = input[0]
         val adj: MutableMap<String, MutableList<String>> = mutableMapOf()
